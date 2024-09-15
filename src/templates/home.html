@@ -5,6 +5,12 @@
 {% block content %}
 <h1>hme</h1>
 
+{% if request.user.is_authenticated %}
+<h1>I am {{ request.user.username }}</h1> 
+{% else %}
+<h1>im not a user</h1>
+{% endif %}
+
 <p>qs is: {{ qs }}</p>
 <p>page qs is: {{ page_qs }}</p>
 <p>the path is: {{request.path}}</p>
