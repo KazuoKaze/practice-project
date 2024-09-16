@@ -23,7 +23,7 @@ import users.urls
 from .views import home_page
 
 urlpatterns = [
-    path('', home_page),
+    path('', home_page, name='home_page'),
     path('', include(users.urls)),
     path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),

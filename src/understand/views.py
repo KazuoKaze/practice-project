@@ -12,3 +12,4 @@ def home_page(request):
     }
     PageVisit.objects.create(path=request.path)
     return render(request, template_name, context)
+
