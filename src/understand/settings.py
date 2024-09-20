@@ -10,22 +10,34 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+from decouple import config
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST=config('EMAIL_HOST', cast=str, default='smtp.gmail.com')
+EMAIL_PORT=config('EMAIL_PORT', cast=str, default='587')
+EMAIL_USE_TLS=config('EMAIL_USE_TLS', cast=bool, default=True)
+EMAIL_USE_SSL=config('EMAIL_USE_SSL', cast=bool, default=False)
+EMAIL_HOST_USER=config('EMAIL_HOST_USER', cast=str, default=None)
+EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD', cast=str, default=None)
+
+ADMINS=[('Tony', 'tonystark11sv@gmail.com')]
+MANAGERS=ADMINS
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-uc(mrd)$cwer8o^6+$lkjg&*ag^xp7)(w$@mtor=o%xp&j2ni+'
+SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = []
-
+ 
 
 # Application definition
 
@@ -37,16 +49,36 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'views'
+    'views',
+    'commando',
+    'users',
+    'profiles',
+    'subsrciptions',
+    'customers',
+
+    "allauth_ui",
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.google',
+    "widget_tweaks",
+
+    "slippers",
+    # Optional -- requires install using `django-allauth[socialaccount]`.
 ]
+
+ALLAUTH_UI_THEME = "fantasy"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    "allauth.account.middleware.AccountMiddleware",
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -76,10 +108,20 @@ WSGI_APPLICATION = 'understand.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3', 
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# CONN_MAX_AGE = config('CONN_MAX_AGE', cast=int, default=30)
+# DATABASE_URL = config('DATABASE_URL', default=None)
+
+# if DATABASE_URL is not None:
+#     import dj_database_url
+#     DATABASES = {
+#         'default': dj_database_url.config(default=DATABASE_URL, conn_health_checks=True, conn_max_age=CONN_MAX_AGE)
+#     }
 
 
 # Password validation
@@ -100,6 +142,36 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_REDIRECT_URL = '/' 
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_SUBJECT_PREFIX = "[Kazuo]"
+ACCOUNT_EMAIL_REQUIRED=True
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SOCIALACCOUNT_PROVIDERS = {
+    "github": {
+        "VERIFIED_EMAIL": True
+    },
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'offline',
+        },
+        'OAUTH_PKCE_ENABLED': True,
+        'FETCH_USERINFO' : True
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
@@ -107,7 +179,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
-
+ 
 USE_I18N = True
 
 USE_TZ = True
@@ -117,6 +189,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_BASE_DIR = BASE_DIR / 'staticfiles'
+STATICFILES_BASE_DIR.mkdir(exist_ok=True, parents=True)
+STATICFILES_VENDOR_DIR = STATICFILES_BASE_DIR / 'vendors'
+
+STATICFILES_DIRS = [
+    STATICFILES_BASE_DIR
+]
+
+STATIC_ROOT = BASE_DIR / 'local-cdn'
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="block py-8 px-8 self-center">
+    <a class="block py-8 px-8 self-center text-red-900" href="{% url 'profile_list_view' %}"><< prev</a>
+    <h1 class="block px-8 self-center">Hey, {{username}}</h1>
+</div>
+
+{% endblock content%}
