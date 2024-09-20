@@ -9,3 +9,4 @@ django-allauth[socialaccount]
 django-allauth-ui
 slippers
 django-widget-tweaks
+stripe

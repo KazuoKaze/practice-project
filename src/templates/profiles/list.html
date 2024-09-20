@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="block py-8 px-8 self-center">
+    <h1 class="block py-8 px-8 self-center">Hey their big boy....</h1>
+    {% if perms.auth %}
+    {% for instance in object_list %}
+        <a class="block py-8 px-8 self-center" href="/profiles/{{ instance.username }}"><p>{{ instance.username }} -- email: {{instance.email}}</p></a>
+    {% endfor %}
+    {% else %}
+    <p class="block py-8 px-8 self-center">You cant visit this place its for adult</p>
+    {% endif %}
+</div>
+
+{% endblock content%}

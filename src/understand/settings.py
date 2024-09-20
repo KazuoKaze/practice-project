@@ -52,6 +52,9 @@ INSTALLED_APPS = [
     'views',
     'commando',
     'users',
+    'profiles',
+    'subsrciptions',
+    'customers',
 
     "allauth_ui",
     'allauth',
