@@ -1,0 +1,2858 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% include 'base/css.html' %}
+  </head>
+  <body>
+    <div id="___gatsby">
+      <div style="outline: none" tabindex="-1" id="gatsby-focus-wrapper">
+        <div class="App-module--App--ZdAzN">
+          <header class="HeaderPlatform-module--Header--HZZDB">
+            <div class="HeaderPlatform-module--HeaderContent--6-n5X">
+              <div class="HeaderPlatform-module--LogoWrapper--S7LhE">
+                <!-- <a aria-current="page" class="" href="{% url 'home_page' %}"
+                  ><svg
+                    class="HeaderPlatform-module--Logo--bWbtc"
+                    viewBox="0 0 100 100"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="a"
+                        x1="14.639%"
+                        x2="85.355%"
+                        y1="85.361%"
+                        y2="14.645%"
+                      >
+                        <stop offset="0%" stop-color="#4844F2"></stop>
+                        <stop offset="100%" stop-color="#817DFF"></stop>
+                      </linearGradient>
+                      <linearGradient
+                        id="b"
+                        x1="25%"
+                        x2="75%"
+                        y1="93.304%"
+                        y2="6.696%"
+                      >
+                        <stop offset="0%" stop-color="#4844F2"></stop>
+                        <stop offset="100%" stop-color="#817DFF"></stop>
+                      </linearGradient>
+                    </defs>
+                    <g fill="none">
+                      <circle
+                        cx="53.125"
+                        cy="46.875"
+                        r="46.875"
+                        fill="url(#a)"
+                      ></circle>
+                      <circle
+                        cx="22.5"
+                        cy="77.5"
+                        r="22.5"
+                        fill="url(#b)"
+                      ></circle>
+                    </g></svg
+                ></a> -->
+              </div>
+              <nav
+                class="HeaderPlatform-module--DesktopNavigation--1Hp6X HeaderPlatform-module--Navigation--wr8tq"
+              >
+                <div class="HeaderPlatform-module--NavigationLeft--KAUyI">
+                  <a
+                    aria-current="page"
+                    class="HeaderPlatform-module--NavLink--eF2m3 HeaderPlatform-module--NavLinkActive--kaKVO"
+                    href="{% url 'home_page' %}"
+                    style="text-transform: capitalize;"
+                    >{{ subscription.user.username }} Image</a
+                  >
+                </div>
+                <div class="HeaderPlatform-module--NavigationRight--ZdPcs">
+                  <!-- <a
+                    href="#"
+                    class="HeaderPlatform-module--NavLink--eF2m3 HeaderPlatform-module--NavReferralButton--6pi8b"
+                    >🎁 Invite friends!</a
+                  > -->
+                  <a
+                    class="HeaderPlatform-module--NavLink--eF2m3 HeaderPlatform-module--NavImagesButton--LXmg7"
+                    href="/pricing"
+                    >{{ credits }} credits left</a
+                  >
+                  <div
+                    class="Divider-module--Wrapper--rgA6S HeaderPlatform-module--NavDivider--6pRsE"
+                  >
+                    <div
+                      class="Divider-module--Vertical--4gZzI Divider-module--Dark--w2ZDO"
+                    ></div>
+                  </div>
+                  <a
+                    class="HeaderPlatform-module--NavLink--eF2m3"
+                    href="{% url 'buy_credits' %}"
+                    >Buy Credits</a
+                  >
+                  <div
+                    class="Divider-module--Wrapper--rgA6S HeaderPlatform-module--NavDivider--6pRsE"
+                  >
+                    <div
+                      class="Divider-module--Vertical--4gZzI Divider-module--Dark--w2ZDO"
+                    ></div>
+                  </div>
+                  <a
+                    class="HeaderPlatform-module--NavLink--eF2m3"
+                    href="{% url 'account_logout' %}"
+                    style="color: red;"
+                    >Logout</a
+                  >
+                  <!-- <div
+                    class="HeaderPlatform-module--NavLinkDropdownWrapper--XczHS"
+                  >
+                    <button
+                      class="Button-module--Button--iWqHF Button-module--ghost--tqlHF HeaderPlatform-module--NavLinkDropdown--PA4t+"
+                    >
+                      <div class="Button-module--ButtonContent--YYh9w">
+                        My account<svg
+                          class="HeaderPlatform-module--AccountArrowIcon--J1mJA"
+                          viewBox="0 0 24 14"
+                        >
+                          <g
+                            fill="none"
+                            fill-rule="evenodd"
+                            transform="translate(-12 -18)"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M16.24,18.58 L24,26.34 L31.76,18.58 C32.54,17.8 33.8,17.8 34.58,18.58 C35.36,19.36 35.36,20.62 34.58,21.4 L25.4,30.58 C24.62,31.36 23.36,31.36 22.58,30.58 L13.4,21.4 C12.62,20.62 12.62,19.36 13.4,18.58 C14.18,17.82 15.46,17.8 16.24,18.58 Z"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
+                  </div> -->
+                </div>
+              </nav>
+              <nav
+                class="HeaderPlatform-module--MobileNavigation--Uu0qZ HeaderPlatform-module--Navigation--wr8tq"
+              >
+                <button
+                  class="Button-module--Button--iWqHF Button-module--ghost--tqlHF HeaderPlatform-module--NavLink--eF2m3 HeaderPlatform-module--NavLinkMobile--jfCMF"
+                >
+                  <div class="Button-module--ButtonContent--YYh9w">
+                    <div
+                      class="Hamburger-module--Hamburger--6x7AQ HeaderPlatform-module--MobileMenuHamburger--SFvki"
+                    >
+                      <span class="Hamburger-module--HamburgerBox--SA51w"
+                        ><span
+                          class="Hamburger-module--HamburgerInner--VcFix HeaderPlatform-module--MobileMenuHamburgerSpan--xX6a9"
+                        ></span
+                      ></span>
+                    </div>
+                  </div>
+                </button>
+              </nav>
+            </div>
+          </header>
+          <main class="MainPlatform-module--Main--hGhjc">
+            <div
+              tabindex="-1"
+              class="Router-module--Router--3vIis"
+              style="outline: none"
+            >
+              <div class="common-module--Page--Ik8qn">
+                <div class="BackgroundDropzone-module--Dropzone--19H7G"></div>
+                <div class="Playground-module--ImagesSectionsWrapper--Gxuut">
+                  <section class="Playground-module--UploaderSection--gT4Aw">
+                    <div class="common-module--SectionHeader--V2Uvf">
+                      <h2 class="common-module--Header--No63g">
+                        Images to process
+                      </h2>
+                    </div>
+                    <div class="Divider-module--Wrapper--rgA6S">
+                      <div
+                        class="Divider-module--Horizontal--BMDW+ Divider-module--Dark--w2ZDO Divider-module--ultrathin--JQ8f1"
+                      ></div>
+                    </div>
+                    <div>
+                      <div class="uppy-Root" dir="ltr">
+                        <div
+                          class="uppy-Dashboard uppy-Dashboard--modal uppy-Dashboard--isInnerWrapVisible"
+                          data-uppy-theme="dark"
+                          data-uppy-num-acquirers="1"
+                          data-uppy-drag-drop-supported="true"
+                          aria-hidden="true"
+                          aria-label="File Uploader Window (Press escape to close)"
+                        >
+                          <div
+                            class="uppy-Dashboard-overlay"
+                            tabindex="-1"
+                          ></div>
+                          <div
+                            class="uppy-Dashboard-inner"
+                            aria-modal="true"
+                            role="dialog"
+                          >
+                            <button
+                              class="uppy-u-reset uppy-Dashboard-close"
+                              type="button"
+                              aria-label="Close Modal"
+                              title="Close Modal"
+                            >
+                              <span aria-hidden="true">×</span>
+                            </button>
+                            <div class="uppy-Dashboard-innerWrap">
+                              <div class="uppy-Dashboard-dropFilesHereHint">
+                                Drop your files here
+                              </div>
+                              <div class="uppy-Dashboard-AddFiles">
+                                <input
+                                  class="uppy-Dashboard-input"
+                                  hidden=""
+                                  aria-hidden="true"
+                                  tabindex="-1"
+                                  type="file"
+                                  name="files[]"
+                                  multiple=""
+                                  accept="image/png,image/jpeg,image/jpg,image/x-ms-bmp,image/bmp,image/webp,application/octet-stream"
+                                /><input
+                                  class="uppy-Dashboard-input"
+                                  hidden=""
+                                  aria-hidden="true"
+                                  tabindex="-1"
+                                  webkitdirectory=""
+                                  type="file"
+                                  name="files[]"
+                                  multiple=""
+                                  accept="image/png,image/jpeg,image/jpg,image/x-ms-bmp,image/bmp,image/webp,application/octet-stream"
+                                />
+                                <div class="uppy-Dashboard-AddFiles-title">
+                                  Drop files here,
+                                  <button
+                                    type="button"
+                                    class="uppy-u-reset uppy-Dashboard-browse"
+                                  >
+                                    browse files
+                                  </button>
+                                  or import from:
+                                </div>
+                                <div
+                                  class="uppy-Dashboard-AddFiles-list"
+                                  role="tablist"
+                                >
+                                  <div
+                                    class="uppy-DashboardTab"
+                                    role="presentation"
+                                    data-uppy-acquirer-id="MyDevice"
+                                  >
+                                    <button
+                                      type="button"
+                                      class="uppy-u-reset uppy-c-btn uppy-DashboardTab-btn"
+                                      role="tab"
+                                      tabindex="0"
+                                      data-uppy-super-focusable="true"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        focusable="false"
+                                        width="32"
+                                        height="32"
+                                        viewBox="0 0 32 32"
+                                      >
+                                        <g fill="none" fillRule="evenodd">
+                                          <rect
+                                            class="uppy-ProviderIconBg"
+                                            width="32"
+                                            height="32"
+                                            rx="16"
+                                            fill="#2275D7"
+                                          ></rect>
+                                          <path
+                                            d="M21.973 21.152H9.863l-1.108-5.087h14.464l-1.246 5.087zM9.935 11.37h3.958l.886 1.444a.673.673 0 0 0 .585.316h6.506v1.37H9.935v-3.13zm14.898 3.44a.793.793 0 0 0-.616-.31h-.978v-2.126c0-.379-.275-.613-.653-.613H15.75l-.886-1.445a.673.673 0 0 0-.585-.316H9.232c-.378 0-.667.209-.667.587V14.5h-.782a.793.793 0 0 0-.61.303.795.795 0 0 0-.155.663l1.45 6.633c.078.36.396.618.764.618h13.354c.36 0 .674-.246.76-.595l1.631-6.636a.795.795 0 0 0-.144-.675z"
+                                            fill="#FFF"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                      <div class="uppy-DashboardTab-name">
+                                        My Device
+                                      </div>
+                                    </button>
+                                  </div>
+                                  <span
+                                    role="presentation"
+                                    style="white-space: nowrap"
+                                    ><div
+                                      class="uppy-DashboardTab"
+                                      role="presentation"
+                                      data-uppy-acquirer-id="GoogleDrive"
+                                    >
+                                      <button
+                                        type="button"
+                                        class="uppy-u-reset uppy-c-btn uppy-DashboardTab-btn"
+                                        role="tab"
+                                        tabindex="0"
+                                        aria-controls="uppy-DashboardContent-panel--GoogleDrive"
+                                        data-uppy-super-focusable="true"
+                                      >
+                                        <svg
+                                          aria-hidden="true"
+                                          focusable="false"
+                                          width="32"
+                                          height="32"
+                                          viewBox="0 0 32 32"
+                                        >
+                                          <g fill="none" fillRule="evenodd">
+                                            <rect
+                                              class="uppy-ProviderIconBg"
+                                              fill="#4285F4"
+                                              width="32"
+                                              height="32"
+                                              rx="16"
+                                            ></rect>
+                                            <path
+                                              d="M10.324 23.3l3-5.1H25l-3 5.1H10.324zM13 18.2l-3 5.1-3-5.1 5.839-9.924 2.999 5.1L13 18.2zm11.838-.276h-6L13 8h6l5.84 9.924h-.002z"
+                                              fill="#FFF"
+                                            ></path>
+                                          </g>
+                                        </svg>
+                                        <div class="uppy-DashboardTab-name">
+                                          Google Drive
+                                        </div>
+                                      </button>
+                                    </div></span
+                                  >
+                                </div>
+                                <div class="uppy-Dashboard-AddFiles-info"></div>
+                              </div>
+                              <div class="uppy-Dashboard-progressindicators">
+                                <div
+                                  class="uppy uppy-Informer"
+                                  aria-hidden="true"
+                                >
+                                  <p role="alert"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <input
+                        type="file"
+                        class="BlockDropzone-module--FileInput--QODLx"
+                        accept=".bmp,image/png,image/jpeg,image/jpg,image/bmp,image/webp"
+                        multiple=""
+                      />
+                      <div
+                        class="BlockDropzone-module--Dropzone--b8X9j Playground-module--Dropzone--tKWCo"
+                      >
+                        <div class="BlockDropzone-module--IconWrapper--Ypg-y">
+                          <div class="BlockDropzone-module--UploadIcon--qmEd4">
+                            <span
+                              class="BlockDropzone-module--UploadIcon_beforeWrapper--p6OcG"
+                              ><svg
+                                class="BlockDropzone-module--UploadIcon_before--5wxxI"
+                                width="60"
+                                height="60"
+                                viewBox="0 0 60 60"
+                                fill="none"
+                              >
+                                <mask
+                                  id="mask0_873_3371"
+                                  maskUnits="userSpaceOnUse"
+                                  x="0"
+                                  y="0"
+                                  width="60"
+                                  height="60"
+                                  style="mask-type: alpha"
+                                >
+                                  <rect
+                                    width="60"
+                                    height="60"
+                                    rx="6"
+                                    fill="#EEEEFF"
+                                  ></rect>
+                                </mask>
+                                <g mask="url(#mask0_873_3371)">
+                                  <rect
+                                    width="60"
+                                    height="60"
+                                    rx="6"
+                                    fill="#1C1D24"
+                                  ></rect>
+                                  <circle
+                                    cx="21"
+                                    cy="18"
+                                    r="6"
+                                    fill="#E6E6FF"
+                                  ></circle>
+                                  <rect
+                                    opacity="0.3"
+                                    x="10.7969"
+                                    y="34"
+                                    width="60"
+                                    height="60"
+                                    rx="6"
+                                    transform="rotate(45.503 10.7969 34)"
+                                    fill="#E6E6FF"
+                                  ></rect>
+                                  <rect
+                                    x="38.7969"
+                                    y="26"
+                                    width="60"
+                                    height="60"
+                                    rx="6"
+                                    transform="rotate(45.503 38.7969 26)"
+                                    fill="#E6E6FF"
+                                  ></rect>
+                                </g></svg></span
+                            ><svg
+                              class="BlockDropzone-module--UploadIcon_after--GQDy9"
+                              width="60"
+                              height="60"
+                              viewBox="0 0 60 60"
+                              fill="none"
+                            >
+                              <mask
+                                id="mask0_873_3371"
+                                maskUnits="userSpaceOnUse"
+                                x="0"
+                                y="0"
+                                width="60"
+                                height="60"
+                                style="mask-type: alpha"
+                              >
+                                <rect
+                                  width="60"
+                                  height="60"
+                                  rx="6"
+                                  fill="#EEEEFF"
+                                ></rect>
+                              </mask>
+                              <g mask="url(#mask0_873_3371)">
+                                <rect
+                                  width="60"
+                                  height="60"
+                                  rx="6"
+                                  fill="#1C1D24"
+                                ></rect>
+                                <circle
+                                  cx="21"
+                                  cy="18"
+                                  r="6"
+                                  fill="#E6E6FF"
+                                ></circle>
+                                <rect
+                                  opacity="0.3"
+                                  x="10.7969"
+                                  y="34"
+                                  width="60"
+                                  height="60"
+                                  rx="6"
+                                  transform="rotate(45.503 10.7969 34)"
+                                  fill="#E6E6FF"
+                                ></rect>
+                                <rect
+                                  x="38.7969"
+                                  y="26"
+                                  width="60"
+                                  height="60"
+                                  rx="6"
+                                  transform="rotate(45.503 38.7969 26)"
+                                  fill="#E6E6FF"
+                                ></rect>
+                              </g></svg
+                            ><svg
+                              class="BlockDropzone-module--UploadIcon_original--PvGKb"
+                              width="60"
+                              height="60"
+                              viewBox="0 0 60 60"
+                              fill="none"
+                            >
+                              <mask
+                                id="mask0_873_3371"
+                                maskUnits="userSpaceOnUse"
+                                x="0"
+                                y="0"
+                                width="60"
+                                height="60"
+                                style="mask-type: alpha"
+                              >
+                                <rect
+                                  width="60"
+                                  height="60"
+                                  rx="6"
+                                  fill="#EEEEFF"
+                                ></rect>
+                              </mask>
+                              <g mask="url(#mask0_873_3371)">
+                                <rect
+                                  width="60"
+                                  height="60"
+                                  rx="6"
+                                  fill="#1C1D24"
+                                ></rect>
+                                <circle
+                                  cx="21"
+                                  cy="18"
+                                  r="6"
+                                  fill="#E6E6FF"
+                                ></circle>
+                                <rect
+                                  opacity="0.3"
+                                  x="10.7969"
+                                  y="34"
+                                  width="60"
+                                  height="60"
+                                  rx="6"
+                                  transform="rotate(45.503 10.7969 34)"
+                                  fill="#E6E6FF"
+                                ></rect>
+                                <rect
+                                  x="38.7969"
+                                  y="26"
+                                  width="60"
+                                  height="60"
+                                  rx="6"
+                                  transform="rotate(45.503 38.7969 26)"
+                                  fill="#E6E6FF"
+                                ></rect>
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="BlockDropzone-module--Text---NXjd">
+                          Drop your images,
+                          <span class="BlockDropzone-module--TextLink--0oVF2"
+                            >browse</span
+                          >
+                        </div>
+                        <div class="BlockDropzone-module--TextParagraph--FnofI">
+                          or import from
+                        </div>
+                        <div>
+                          <div role="tablist">
+                            <div
+                              role="presentation"
+                              class="BlockDropzone-module--Acquirers--ZMyC0"
+                            >
+                              <span role="presentation"
+                                ><button
+                                  class="Button-module--Button--iWqHF Button-module--ghost--tqlHF BlockDropzone-module--AcquirerIcon--DwEhj"
+                                >
+                                  <div
+                                    class="Button-module--ButtonContent--YYh9w"
+                                  >
+                                    <svg viewBox="0 0 32 32">
+                                      <g>
+                                        <circle
+                                          cx="16"
+                                          cy="16"
+                                          r="16"
+                                          fill="currentColor"
+                                        ></circle>
+                                        <path
+                                          fill="#B0B7CB"
+                                          d="m26.215727,13.651575l-1.563881,8.403662c-0.119261,0.640665 -0.633204,1.100914 -1.229612,1.100914l-14.55471,0c-0.793943,0 -1.388305,-0.798185 -1.229613,-1.651051l1.399821,-7.521796c0.125899,-0.676299 0.668436,-1.162017 1.297931,-1.162017l14.653087,0l0.608707,0c0.299427,0 0.542439,0.225791 0.611536,0.519639c0.022936,0.097914 0.026644,0.203318 0.006735,0.310649zm-18.134242,0.117817c0.217639,-1.1694 1.16559,-2.018197 2.254177,-2.018197l14.64684,0c-0.058558,-0.611346 -0.531313,-1.089463 -1.1042,-1.089463l-7.727858,0c-0.156647,-1.030287 -0.975478,-1.817983 -1.958758,-1.817983l-5.992305,0c-0.718406,-0.000108 -1.302909,0.640773 -1.302909,1.428468l0,9.864769l1.185013,-6.367594z"
+                                        ></path>
+                                      </g>
+                                    </svg>
+                                  </div></button></span
+                              ><span role="presentation"
+                                ><button
+                                  class="Button-module--Button--iWqHF Button-module--ghost--tqlHF BlockDropzone-module--AcquirerIcon--DwEhj"
+                                >
+                                  <div
+                                    class="Button-module--ButtonContent--YYh9w"
+                                  >
+                                    <svg viewBox="0 0 32 32">
+                                      <g fill="none" fill-rule="evenodd">
+                                        <circle
+                                          cx="16"
+                                          cy="16"
+                                          r="16"
+                                          fill="currentColor"
+                                        ></circle>
+                                        <path
+                                          fill="#B0B7CB"
+                                          d="M26.667 19.111l-3.556 6.222H9.875l3.612-6.222h13.18zM11.94 7.548l3.557 6.217-3.054 5.346h.015l-3.59 6.186-3.536-6.186 6.608-11.563zm7.615-.881l6.602 11.555h-7.11l-2.06-3.603.018-.01-.22-.385-4.326-7.557h7.096z"
+                                        ></path>
+                                      </g>
+                                    </svg>
+                                  </div></button
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="BlockDropzone-module--AllowedFormats--z-WLo"
+                        >
+                          JPG, PNG, WebP up to 50 mb
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section
+                    class="ProcessedImages-module--ProcessedSection--cclhx"
+                  >
+                    <div class="common-module--SectionHeader--V2Uvf">
+                      <div class="common-module--HeaderCheckbox--bgkLt">
+                        <label
+                          class="CheckboxRound-module--Label--9C3ma CheckboxRound-module--Label_light--XcvM5"
+                          >
+                          <!-- <input
+                            type="checkbox"
+                            class="CheckboxRound-module--Input--Wy9bj"
+                          /> -->
+                          <!-- <div
+                            class="ProcessedImages-module--ProcessedImagesCheckbox--E0Q9Y CheckboxRound-module--CheckboxButton--UG79Z"
+                          >
+                            <div
+                              class="ProcessedImages-module--ProcessedImagesCheckboxEmpty---ZvoD CheckboxRound-module--CheckRound--U47cD"
+                            ></div>
+                          </div> -->
+                          <h2 class="common-module--Header--No63g">
+                            My images
+                          </h2></label
+                        >
+                      </div>
+                      <div class="common-module--SectionActions--6GNgj"></div>
+                    </div>
+                    <div class="Divider-module--Wrapper--rgA6S">
+                      <div
+                        class="Divider-module--Horizontal--BMDW+ Divider-module--Dark--w2ZDO Divider-module--ultrathin--JQ8f1"
+                      ></div>
+                    </div>
+                    <div>
+                      <div class="ProcessedImages-module--ImagesSection--UE1Mi">
+                        <div class="ProcessedImages-module--Images--83pLw">
+                          <div class="ProcessImage-module--Wrapper--Og4bz">
+                            <img
+                              class="ProcessImage-module--Image--KTy5Z"
+                              src="https://cdn.images.letsenhance.io/thumbnails/s3/92484169?w=240&amp;h=240&amp;transform=%2Fwatermark%3A1.0%3Ace%3A0%3A0%3A0.40&amp;signature=w835ZyBnIDxVOROUpy8AC5xR4w0%3D"
+                              alt="Enhanced blue-color-4_LE_auto_x2.jpg"
+                              data-browsing-ignore="true"
+                            />
+                            <div
+                              class="ProcessImage-module--ProcessedImageDetails--Twbc3"
+                            >
+                              <div
+                                class="ProcessImage-module--OverlayContent--rpXlN ProcessImage-module--OverlayContentSuccess--f3pCp"
+                              >
+                                <div
+                                  class="ProcessImage-module--OverlayHeader--yRhMv"
+                                >
+                                  <div
+                                    class="ProcessImage-module--CheckButtonWrapper--EQcgw"
+                                  >
+                                    <label
+                                      class="CheckboxRound-module--Label--9C3ma ProcessImage-module--CheckButton--IkMiZ CheckboxRound-module--Label_light--XcvM5"
+                                      ><input
+                                        type="checkbox"
+                                        class="CheckboxRound-module--Input--Wy9bj" />
+                                      <div
+                                        class="CheckboxRound-module--CheckboxButton--UG79Z"
+                                      >
+                                        <div
+                                          class="CheckboxRound-module--CheckRound--U47cD"
+                                        ></div></div
+                                    ></label>
+                                  </div>
+                                  <div
+                                    class="ProcessImage-module--FeedbackButtonWrapper--7JKOf"
+                                  >
+                                    <button
+                                      class="Button-module--Button--iWqHF Button-module--medium--vbp8B Button-module--secondary_light--kZQPu ProcessImage-module--FeedbackButton--cpfon"
+                                    >
+                                      <div
+                                        class="Button-module--ButtonContent--YYh9w"
+                                      >
+                                        How is the result?
+                                      </div>
+                                    </button>
+                                  </div>
+                                  <div
+                                    class="ProcessImage-module--Actions--YcDsj"
+                                  >
+                                    <button
+                                      class="Button-module--Button--iWqHF Button-module--ghost--tqlHF ProcessImage-module--ActionsButton--7w1te"
+                                    >
+                                      <div
+                                        class="Button-module--ButtonContent--YYh9w"
+                                      >
+                                        <svg
+                                          class="ProcessImage-module--ActionsButtonIcon--MgSot"
+                                          width="4"
+                                          height="16"
+                                          viewBox="0 0 4 16"
+                                        >
+                                          <g fill-rule="evenodd">
+                                            <path
+                                              fill="currentColor"
+                                              d="M2 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2C.9 6 0 6.9 0 8s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                            ></path>
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="ProcessImage-module--OverlayFooter--kB9t9 ProcessImage-module--OverlayFooterSuccess--myQn0"
+                                >
+                                  <div>
+                                    <div
+                                      class="ProcessImage-module--SuccessOverlayTitle--cnIp8"
+                                    >
+                                      <span
+                                        class="ProcessImage-module--SuccessOverlaySubtitle--qAzFq"
+                                        >Before:</span
+                                      ><span
+                                        class="ProcessImage-module--SuccessOverlaySubtitle--qAzFq"
+                                        >430 x 932 px</span
+                                      ><span>After:</span>
+                                      <span>860 x 1864 px</span>
+                                    </div>
+                                    <div
+                                      class="ProcessImage-module--SuccessOverlayDimensions--xncrs"
+                                    >
+                                      <div>
+                                        <div>Upscale: Smart Enhance</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="ProcessImage-module--SuccessOverlayShare--4msrE"
+                                  >
+                                    <svg
+                                      class="ProcessImage-module--DownloadIcon--6u-y8"
+                                      viewBox="0 0 509 512"
+                                      fill="currentColor"
+                                    >
+                                      <path
+                                        d="M478.1 316.12C461.04 316.12 447.19 329.97 447.19 347.03V434.85C447.19 438.91 445.5 442.67 442.82 445.35C440.13 448.03 436.38 449.73 432.31 449.73H343.986C326.946 449.754 313.12 463.595 313.12 480.63C313.12 497.69 326.97 511.54 344.03 511.54L432.31 511.54C453.4 511.54 472.61 502.91 486.49 489.03C500.37 475.14 509 455.93 509 434.85V347.03C509 329.97 495.15 316.12 478.1 316.12Z"
+                                      ></path>
+                                      <path
+                                        d="M195.42 480.98C195.42 463.92 181.57 450.07 164.51 450.07H76.69C72.63 450.07 68.87 448.38 66.19 445.7C63.51 443.01 61.81 439.26 61.81 435.19L61.81 346.866C61.7863 329.826 47.9455 316 30.9101 316C13.8501 316 5.77275e-05 329.85 5.69818e-05 346.91L2.26054e-05 435.19C2.16835e-05 456.28 8.63003 475.49 22.51 489.37C36.4 503.25 55.61 511.88 76.69 511.88H164.51C181.57 511.88 195.42 498.03 195.42 480.98Z"
+                                      ></path>
+                                      <path
+                                        d="M30.9 195.76C47.96 195.76 61.81 181.91 61.81 164.85L61.81 77.03C61.81 72.97 63.5 69.21 66.18 66.53C68.87 63.85 72.62 62.15 76.69 62.15L165.014 62.15C182.054 62.1263 195.88 48.2854 195.88 31.25C195.88 14.19 182.03 0.340022 164.97 0.34002L76.69 0.339982C55.6 0.33998 36.39 8.96998 22.51 22.85C8.63002 36.74 9.52034e-06 55.95 7.67747e-06 77.03L0 164.85C-1.49143e-06 181.91 13.85 195.76 30.9 195.76Z"
+                                      ></path>
+                                      <path
+                                        d="M313.58 30.9C313.58 47.96 327.43 61.81 344.49 61.81L432.31 61.81C436.37 61.81 440.13 63.5 442.81 66.18C445.49 68.87 447.19 72.62 447.19 76.69V165.014C447.214 182.054 461.055 195.88 478.09 195.88C495.15 195.88 509 182.03 509 164.97L509 76.69C509 55.6 500.37 36.39 486.49 22.51C472.6 8.63002 453.39 1.42805e-05 432.31 1.15162e-05L344.49 0C327.43 -2.23715e-06 313.58 13.85 313.58 30.9Z"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                  <div
+                                    class="ProcessImage-module--SuccessOverlayDownload--3DqBS"
+                                  >
+                                    <svg
+                                      class="ProcessImage-module--DownloadIcon--6u-y8"
+                                      width="16"
+                                      height="16"
+                                      viewBox="0 0 16 16"
+                                    >
+                                      <g
+                                        fill="none"
+                                        fill-rule="evenodd"
+                                        transform="translate(-4 -4)"
+                                      >
+                                        <polygon
+                                          points="0 0 24 0 24 24 0 24"
+                                        ></polygon>
+                                        <path
+                                          fill="currentColor"
+                                          fill-rule="nonzero"
+                                          d="M11,5 L11,16.17 L6.12,11.29 C5.73,10.9 5.09,10.9 4.7,11.29 C4.31,11.68 4.31,12.31 4.7,12.7 L11.29,19.29 C11.68,19.68 12.31,19.68 12.7,19.29 L19.29,12.7 C19.68,12.31 19.68,11.68 19.29,11.29 C18.9,10.9 18.27,10.9 17.88,11.29 L13,16.17 L13,5 C13,4.45 12.55,4 12,4 C11.45,4 11,4.45 11,5 Z"
+                                        ></path>
+                                      </g>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <footer class="Playground-module--Footer--nfB4J">
+                    <div class="Playground-module--FooterActions--a9Txj">
+                      <a
+                        class="Playground-module--FooterLink--3MtB2"
+                        href="mailto:support@letsenhance.io"
+                        >Contact support</a
+                      >
+                    </div>
+                  </footer>
+                </div>
+                <!-- <section
+                  class="Playground-module--DesktopControlsWrapper--1hWuw"
+                >
+                  <div
+                    class="Controls-module--Wrapper--Del8+ Playground-module--FixedControls--nFp9y"
+                  >
+                    <div class="Controls-module--Tabs--gC2Ab">
+                      <div
+                        class="Controls-module--Tab--uzetn Controls-module--TabActive--yjptw"
+                      >
+                        Operations
+                      </div>
+                      <div id="presetsTab" class="Controls-module--Tab--uzetn">
+                        Presets
+                      </div>
+                    </div>
+                    <div
+                      class="Operations-module--Operations--THavZ Controls-module--Operations--QE6kv"
+                    >
+                      <div
+                        class="SettingsBarOption-module--OptionWrapper--MIGAh"
+                      >
+                        <div class="SettingsBarOption-module--Header--DVXlU">
+                          <div
+                            class="SettingsBarOption-module--OptionBarHeader--pRBTw"
+                          >
+                            <div>
+                              Upscale type<span
+                                class="Popover-module--PopoverTrigger--DwLpw"
+                                ><svg
+                                  class="Popover-module--DefaultTrigger--utTX1"
+                                  viewBox="0 0 10 10"
+                                >
+                                  <g
+                                    fill="none"
+                                    fill-rule="evenodd"
+                                    transform="translate(-1 -1)"
+                                  >
+                                    <polygon
+                                      points="0 0 12 0 12 12 0 12"
+                                    ></polygon>
+                                    <path
+                                      fill="currentColor"
+                                      fill-rule="nonzero"
+                                      d="M6,1 C3.24,1 1,3.24 1,6 C1,8.76 3.24,11 6,11 C8.76,11 11,8.76 11,6 C11,3.24 8.76,1 6,1 Z M6,8.5 C5.725,8.5 5.5,8.275 5.5,8 L5.5,6 C5.5,5.725 5.725,5.5 6,5.5 C6.275,5.5 6.5,5.725 6.5,6 L6.5,8 C6.5,8.275 6.275,8.5 6,8.5 Z M6.5,4.5 L5.5,4.5 L5.5,3.5 L6.5,3.5 L6.5,4.5 Z"
+                                    ></path>
+                                  </g></svg
+                              ></span>
+                            </div>
+                            <div
+                              style="
+                                position: relative;
+                                display: inline-block;
+                                text-align: left;
+                                opacity: 1;
+                                direction: ltr;
+                                border-radius: 10px;
+                                transition: opacity 0.25s;
+                                touch-action: none;
+                                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                                user-select: none;
+                              "
+                            >
+                              <div
+                                class="react-switch-bg"
+                                style="
+                                  height: 20px;
+                                  width: 32px;
+                                  margin: 0px;
+                                  position: relative;
+                                  background: rgb(63, 55, 149);
+                                  border-radius: 10px;
+                                  cursor: pointer;
+                                  transition: background 0.25s;
+                                "
+                              ></div>
+                              <div
+                                class="react-switch-handle"
+                                style="
+                                  height: 20px;
+                                  width: 20px;
+                                  background: rgb(255, 255, 255);
+                                  display: inline-block;
+                                  cursor: pointer;
+                                  border-radius: 50%;
+                                  position: absolute;
+                                  transform: translateX(12px);
+                                  top: 0px;
+                                  outline: 0px;
+                                  border: 0px;
+                                  transition: background-color 0.25s,
+                                    transform 0.25s, box-shadow 0.15s;
+                                "
+                              ></div>
+                              <input
+                                type="checkbox"
+                                role="switch"
+                                aria-checked="true"
+                                checked=""
+                                style="
+                                  border: 0px;
+                                  clip: rect(0px, 0px, 0px, 0px);
+                                  height: 1px;
+                                  margin: -1px;
+                                  overflow: hidden;
+                                  padding: 0px;
+                                  position: absolute;
+                                  width: 1px;
+                                "
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="SettingsBarOption-module--MainOptionContent--kku0O"
+                        >
+                          <div
+                            class="UpscaleType-module--ImageStyleOptionsWrapper--JZfmk"
+                          >
+                            <label
+                              class="RadioButton-module--RadioButton--sTGtv RadioButton-module--Button--7kTHy RadioButton-module--small--QrNga UpscaleType-module--ImageStyleOption--mYEsl RadioButton-module--ButtonActive--f+8iz"
+                              ><input
+                                type="radio"
+                                name="imageStyle"
+                                class="RadioButton-module--Input--xtfBG"
+                                checked="" /><span>Smart Enhance</span
+                              ><span
+                                class="Popover-module--PopoverTrigger--DwLpw"
+                                ><svg
+                                  class="Popover-module--DefaultTrigger--utTX1"
+                                  viewBox="0 0 10 10"
+                                >
+                                  <g
+                                    fill="none"
+                                    fill-rule="evenodd"
+                                    transform="translate(-1 -1)"
+                                  >
+                                    <polygon
+                                      points="0 0 12 0 12 12 0 12"
+                                    ></polygon>
+                                    <path
+                                      fill="currentColor"
+                                      fill-rule="nonzero"
+                                      d="M6,1 C3.24,1 1,3.24 1,6 C1,8.76 3.24,11 6,11 C8.76,11 11,8.76 11,6 C11,3.24 8.76,1 6,1 Z M6,8.5 C5.725,8.5 5.5,8.275 5.5,8 L5.5,6 C5.5,5.725 5.725,5.5 6,5.5 C6.275,5.5 6.5,5.725 6.5,6 L6.5,8 C6.5,8.275 6.275,8.5 6,8.5 Z M6.5,4.5 L5.5,4.5 L5.5,3.5 L6.5,3.5 L6.5,4.5 Z"
+                                    ></path>
+                                  </g></svg></span></label
+                            ><label
+                              class="RadioButton-module--RadioButton--sTGtv RadioButton-module--Button--7kTHy RadioButton-module--small--QrNga UpscaleType-module--ImageStyleOption--mYEsl"
+                              ><input
+                                type="radio"
+                                name="imageStyle"
+                                class="RadioButton-module--Input--xtfBG" /><span
+                                >Digital art</span
+                              ><span
+                                class="Popover-module--PopoverTrigger--DwLpw"
+                                ><svg
+                                  class="Popover-module--DefaultTrigger--utTX1"
+                                  viewBox="0 0 10 10"
+                                >
+                                  <g
+                                    fill="none"
+                                    fill-rule="evenodd"
+                                    transform="translate(-1 -1)"
+                                  >
+                                    <polygon
+                                      points="0 0 12 0 12 12 0 12"
+                                    ></polygon>
+                                    <path
+                                      fill="currentColor"
+                                      fill-rule="nonzero"
+                                      d="M6,1 C3.24,1 1,3.24 1,6 C1,8.76 3.24,11 6,11 C8.76,11 11,8.76 11,6 C11,3.24 8.76,1 6,1 Z M6,8.5 C5.725,8.5 5.5,8.275 5.5,8 L5.5,6 C5.5,5.725 5.725,5.5 6,5.5 C6.275,5.5 6.5,5.725 6.5,6 L6.5,8 C6.5,8.275 6.275,8.5 6,8.5 Z M6.5,4.5 L5.5,4.5 L5.5,3.5 L6.5,3.5 L6.5,4.5 Z"
+                                    ></path>
+                                  </g></svg></span></label
+                            ><label
+                              class="RadioButton-module--RadioButton--sTGtv RadioButton-module--Button--7kTHy RadioButton-module--small--QrNga UpscaleType-module--ImageStyleOption--mYEsl"
+                              ><input
+                                type="radio"
+                                name="imageStyle"
+                                class="RadioButton-module--Input--xtfBG" /><span
+                                >Image with Text</span
+                              ><span
+                                class="Popover-module--PopoverTrigger--DwLpw"
+                                ><svg
+                                  class="Popover-module--DefaultTrigger--utTX1"
+                                  viewBox="0 0 10 10"
+                                >
+                                  <g
+                                    fill="none"
+                                    fill-rule="evenodd"
+                                    transform="translate(-1 -1)"
+                                  >
+                                    <polygon
+                                      points="0 0 12 0 12 12 0 12"
+                                    ></polygon>
+                                    <path
+                                      fill="currentColor"
+                                      fill-rule="nonzero"
+                                      d="M6,1 C3.24,1 1,3.24 1,6 C1,8.76 3.24,11 6,11 C8.76,11 11,8.76 11,6 C11,3.24 8.76,1 6,1 Z M6,8.5 C5.725,8.5 5.5,8.275 5.5,8 L5.5,6 C5.5,5.725 5.725,5.5 6,5.5 C6.275,5.5 6.5,5.725 6.5,6 L6.5,8 C6.5,8.275 6.275,8.5 6,8.5 Z M6.5,4.5 L5.5,4.5 L5.5,3.5 L6.5,3.5 L6.5,4.5 Z"
+                                    ></path>
+                                  </g></svg></span></label
+                            ><label
+                              class="RadioButton-module--RadioButton--sTGtv RadioButton-module--Button--7kTHy RadioButton-module--small--QrNga UpscaleType-module--ImageStyleOption--mYEsl"
+                              ><input
+                                type="radio"
+                                name="imageStyle"
+                                class="RadioButton-module--Input--xtfBG" /><span
+                                >Old Photo</span
+                              ><span
+                                class="Popover-module--PopoverTrigger--DwLpw"
+                                ><svg
+                                  class="Popover-module--DefaultTrigger--utTX1"
+                                  viewBox="0 0 10 10"
+                                >
+                                  <g
+                                    fill="none"
+                                    fill-rule="evenodd"
+                                    transform="translate(-1 -1)"
+                                  >
+                                    <polygon
+                                      points="0 0 12 0 12 12 0 12"
+                                    ></polygon>
+                                    <path
+                                      fill="currentColor"
+                                      fill-rule="nonzero"
+                                      d="M6,1 C3.24,1 1,3.24 1,6 C1,8.76 3.24,11 6,11 C8.76,11 11,8.76 11,6 C11,3.24 8.76,1 6,1 Z M6,8.5 C5.725,8.5 5.5,8.275 5.5,8 L5.5,6 C5.5,5.725 5.725,5.5 6,5.5 C6.275,5.5 6.5,5.725 6.5,6 L6.5,8 C6.5,8.275 6.275,8.5 6,8.5 Z M6.5,4.5 L5.5,4.5 L5.5,3.5 L6.5,3.5 L6.5,4.5 Z"
+                                    ></path>
+                                  </g></svg></span></label
+                            ><label
+                              class="RadioButton-module--RadioButton--sTGtv RadioButton-module--Button--7kTHy RadioButton-module--small--QrNga UpscaleType-module--ImageStyleOption--mYEsl"
+                              ><input
+                                type="radio"
+                                name="imageStyle"
+                                class="RadioButton-module--Input--xtfBG" />
+                              <div
+                                class="UpscaleType-module--MagicOverlay--RcWs8"
+                              >
+                                <svg
+                                  class="UpscaleType-module--Star--Z6iFR UpscaleType-module--Star1--MiEn4"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 14 14"
+                                  fill="none"
+                                >
+                                  <g clip-path="url(#clip0_2115_1165)">
+                                    <path
+                                      d="M6.54545 0.909088C6.76767 4.4279 9.57207 7.23234 13.0909 7.45454C9.57207 7.67676 6.76767 10.4812 6.54545 14C6.32325 10.4812 3.51881 7.67676 0 7.45454C3.51881 7.23234 6.32325 4.4279 6.54545 0.909088Z"
+                                      fill="url(#paint0_linear_2115_1165)"
+                                    ></path>
+                                  </g>
+                                  <defs>
+                                    <linearGradient
+                                      id="paint0_linear_2115_1165"
+                                      x1="0"
+                                      y1="14"
+                                      x2="13.0909"
+                                      y2="14"
+                                      gradientUnits="userSpaceOnUse"
+                                    >
+                                      <stop stop-color="#91CEFD"></stop>
+                                      <stop
+                                        offset="0.008"
+                                        stop-color="#91CDFD"
+                                      ></stop>
+                                      <stop
+                                        offset="0.016"
+                                        stop-color="#92CCFD"
+                                      ></stop>
+                                      <stop
+                                        offset="0.024"
+                                        stop-color="#92CAFC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.032"
+                                        stop-color="#93C9FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.04"
+                                        stop-color="#93C8FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.04"
+                                        stop-color="#93C8FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.048"
+                                        stop-color="#93C7FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.056"
+                                        stop-color="#94C6FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.064"
+                                        stop-color="#94C5FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.072"
+                                        stop-color="#95C4FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.08"
+                                        stop-color="#95C3FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.08"
+                                        stop-color="#95C3FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.088"
+                                        stop-color="#95C2FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.096"
+                                        stop-color="#96C1FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.104"
+                                        stop-color="#96C0FB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.112"
+                                        stop-color="#97BFFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.12"
+                                        stop-color="#97BEFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.12"
+                                        stop-color="#97BEFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.128"
+                                        stop-color="#97BDFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.136"
+                                        stop-color="#98BCFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.144"
+                                        stop-color="#98BBFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.152"
+                                        stop-color="#99BAFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.16"
+                                        stop-color="#99B9FB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.16"
+                                        stop-color="#99B9FB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.168"
+                                        stop-color="#99B8FB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.176"
+                                        stop-color="#9AB7FB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.184"
+                                        stop-color="#9AB7FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.192"
+                                        stop-color="#9BB6FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.208"
+                                        stop-color="#9BB4FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.216"
+                                        stop-color="#9CB3FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.224"
+                                        stop-color="#9CB3F9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.232"
+                                        stop-color="#9DB2F9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.24"
+                                        stop-color="#9DB1F9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.24"
+                                        stop-color="#9DB1F9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.248"
+                                        stop-color="#9DB0F9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.256"
+                                        stop-color="#9EAFF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.264"
+                                        stop-color="#9EAFF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.272"
+                                        stop-color="#9FAEF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.28"
+                                        stop-color="#9FADF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.28"
+                                        stop-color="#9FADF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.288"
+                                        stop-color="#9FACF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.296"
+                                        stop-color="#9FACF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.304"
+                                        stop-color="#A0ABF8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.312"
+                                        stop-color="#A0ABF8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.32"
+                                        stop-color="#A0AAF8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.32"
+                                        stop-color="#A0AAF8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.328"
+                                        stop-color="#A0A9F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.336"
+                                        stop-color="#A1A9F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.344"
+                                        stop-color="#A1A8F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.352"
+                                        stop-color="#A2A8F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.36"
+                                        stop-color="#A2A7F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.36"
+                                        stop-color="#A2A7F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.368"
+                                        stop-color="#A2A6F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.376"
+                                        stop-color="#A3A6F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.384"
+                                        stop-color="#A3A5F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.392"
+                                        stop-color="#A4A5F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.408"
+                                        stop-color="#A5A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.416"
+                                        stop-color="#A7A5F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.424"
+                                        stop-color="#A8A5F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.432"
+                                        stop-color="#AAA6F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.44"
+                                        stop-color="#ABA6F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.44"
+                                        stop-color="#ABA6F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.448"
+                                        stop-color="#ACA6F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.456"
+                                        stop-color="#ADA7F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.464"
+                                        stop-color="#AFA7F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.472"
+                                        stop-color="#B0A8F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.48"
+                                        stop-color="#B1A8F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.48"
+                                        stop-color="#B1A8F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.488"
+                                        stop-color="#B2A8F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.496"
+                                        stop-color="#B3A8F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.504"
+                                        stop-color="#B5A9F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.512"
+                                        stop-color="#B6A9F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.52"
+                                        stop-color="#B7A9F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.52"
+                                        stop-color="#B7A9F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.528"
+                                        stop-color="#B8A9F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.536"
+                                        stop-color="#B9AAF6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.544"
+                                        stop-color="#BBAAF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.552"
+                                        stop-color="#BCABF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.56"
+                                        stop-color="#BDABF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.56"
+                                        stop-color="#BDABF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.568"
+                                        stop-color="#BEABF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.576"
+                                        stop-color="#BFACF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.584"
+                                        stop-color="#C0ACF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.592"
+                                        stop-color="#C1ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.608"
+                                        stop-color="#C3ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.616"
+                                        stop-color="#C4AEF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.624"
+                                        stop-color="#C5AEF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.632"
+                                        stop-color="#C6AFF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.64"
+                                        stop-color="#C7AFF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.64"
+                                        stop-color="#C7AFF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.648"
+                                        stop-color="#C8AFF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.656"
+                                        stop-color="#C9AFF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.664"
+                                        stop-color="#CAB0F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.672"
+                                        stop-color="#CBB0F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.68"
+                                        stop-color="#CCB0F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.68"
+                                        stop-color="#CCB0F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.688"
+                                        stop-color="#CDB0F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.696"
+                                        stop-color="#CEB1F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.704"
+                                        stop-color="#CEB1F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.712"
+                                        stop-color="#CFB2F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.72"
+                                        stop-color="#D0B2F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.72"
+                                        stop-color="#D0B2F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.728"
+                                        stop-color="#D1B2F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.736"
+                                        stop-color="#D2B2F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.744"
+                                        stop-color="#D3B3F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.752"
+                                        stop-color="#D4B3F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.76"
+                                        stop-color="#D5B3F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.76"
+                                        stop-color="#D5B3F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.768"
+                                        stop-color="#D6B3F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.776"
+                                        stop-color="#D7B4F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.784"
+                                        stop-color="#D7B4F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.792"
+                                        stop-color="#D8B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.808"
+                                        stop-color="#DAB5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.816"
+                                        stop-color="#DBB6F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.824"
+                                        stop-color="#DBB6F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.832"
+                                        stop-color="#DCB7F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.84"
+                                        stop-color="#DDB7F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.84"
+                                        stop-color="#DDB7F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.848"
+                                        stop-color="#DEB7F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.856"
+                                        stop-color="#DFB7F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.864"
+                                        stop-color="#DFB8F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.872"
+                                        stop-color="#E0B8F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.88"
+                                        stop-color="#E1B8F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.88"
+                                        stop-color="#E1B8F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.888"
+                                        stop-color="#E2B8F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.896"
+                                        stop-color="#E2B9F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.904"
+                                        stop-color="#E3B9F2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.912"
+                                        stop-color="#E3BAF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.92"
+                                        stop-color="#E4BAF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.92"
+                                        stop-color="#E4BAF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.928"
+                                        stop-color="#E5BAF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.936"
+                                        stop-color="#E6BAF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.944"
+                                        stop-color="#E6BBF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.952"
+                                        stop-color="#E7BBF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.96"
+                                        stop-color="#E8BBF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.96"
+                                        stop-color="#E8BBF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.968"
+                                        stop-color="#E9BBF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.976"
+                                        stop-color="#E9BCF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.984"
+                                        stop-color="#EABCF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.992"
+                                        stop-color="#EABDF2"
+                                      ></stop>
+                                      <stop
+                                        offset="1"
+                                        stop-color="#EBBDF2"
+                                      ></stop>
+                                    </linearGradient>
+                                    <clipPath id="clip0_2115_1165">
+                                      <rect
+                                        width="13.0909"
+                                        height="13.0909"
+                                        fill="white"
+                                        transform="translate(0 0.909088)"
+                                      ></rect>
+                                    </clipPath>
+                                  </defs></svg
+                                ><svg
+                                  class="UpscaleType-module--Star--Z6iFR UpscaleType-module--Star2---3eHs"
+                                  width="10"
+                                  height="10"
+                                  viewBox="0 0 10 10"
+                                  fill="none"
+                                >
+                                  <g
+                                    opacity="0.3"
+                                    clip-path="url(#clip0_2115_1144)"
+                                  >
+                                    <path
+                                      d="M4.99991 0C5.16657 2.63911 7.26988 4.74244 9.909 4.90909C7.26988 5.07575 5.16657 7.17905 4.99991 9.81818C4.83326 7.17905 2.72993 5.07575 0.0908203 4.90909C2.72993 4.74244 4.83326 2.63911 4.99991 0Z"
+                                      fill="#E6E6FF"
+                                    ></path>
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2115_1144">
+                                      <rect
+                                        width="9.81818"
+                                        height="9.81818"
+                                        fill="white"
+                                        transform="translate(0.0908203)"
+                                      ></rect>
+                                    </clipPath>
+                                  </defs></svg
+                                ><svg
+                                  class="UpscaleType-module--Star--Z6iFR UpscaleType-module--Star3--9BrIn"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 14 14"
+                                  fill="none"
+                                >
+                                  <g clip-path="url(#clip0_2115_1165)">
+                                    <path
+                                      d="M6.54545 0.909088C6.76767 4.4279 9.57207 7.23234 13.0909 7.45454C9.57207 7.67676 6.76767 10.4812 6.54545 14C6.32325 10.4812 3.51881 7.67676 0 7.45454C3.51881 7.23234 6.32325 4.4279 6.54545 0.909088Z"
+                                      fill="url(#paint0_linear_2115_1165)"
+                                    ></path>
+                                  </g>
+                                  <defs>
+                                    <linearGradient
+                                      id="paint0_linear_2115_1165"
+                                      x1="0"
+                                      y1="14"
+                                      x2="13.0909"
+                                      y2="14"
+                                      gradientUnits="userSpaceOnUse"
+                                    >
+                                      <stop stop-color="#91CEFD"></stop>
+                                      <stop
+                                        offset="0.008"
+                                        stop-color="#91CDFD"
+                                      ></stop>
+                                      <stop
+                                        offset="0.016"
+                                        stop-color="#92CCFD"
+                                      ></stop>
+                                      <stop
+                                        offset="0.024"
+                                        stop-color="#92CAFC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.032"
+                                        stop-color="#93C9FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.04"
+                                        stop-color="#93C8FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.04"
+                                        stop-color="#93C8FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.048"
+                                        stop-color="#93C7FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.056"
+                                        stop-color="#94C6FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.064"
+                                        stop-color="#94C5FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.072"
+                                        stop-color="#95C4FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.08"
+                                        stop-color="#95C3FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.08"
+                                        stop-color="#95C3FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.088"
+                                        stop-color="#95C2FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.096"
+                                        stop-color="#96C1FC"
+                                      ></stop>
+                                      <stop
+                                        offset="0.104"
+                                        stop-color="#96C0FB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.112"
+                                        stop-color="#97BFFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.12"
+                                        stop-color="#97BEFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.12"
+                                        stop-color="#97BEFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.128"
+                                        stop-color="#97BDFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.136"
+                                        stop-color="#98BCFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.144"
+                                        stop-color="#98BBFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.152"
+                                        stop-color="#99BAFB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.16"
+                                        stop-color="#99B9FB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.16"
+                                        stop-color="#99B9FB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.168"
+                                        stop-color="#99B8FB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.176"
+                                        stop-color="#9AB7FB"
+                                      ></stop>
+                                      <stop
+                                        offset="0.184"
+                                        stop-color="#9AB7FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.192"
+                                        stop-color="#9BB6FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.2"
+                                        stop-color="#9BB5FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.208"
+                                        stop-color="#9BB4FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.216"
+                                        stop-color="#9CB3FA"
+                                      ></stop>
+                                      <stop
+                                        offset="0.224"
+                                        stop-color="#9CB3F9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.232"
+                                        stop-color="#9DB2F9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.24"
+                                        stop-color="#9DB1F9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.24"
+                                        stop-color="#9DB1F9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.248"
+                                        stop-color="#9DB0F9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.256"
+                                        stop-color="#9EAFF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.264"
+                                        stop-color="#9EAFF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.272"
+                                        stop-color="#9FAEF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.28"
+                                        stop-color="#9FADF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.28"
+                                        stop-color="#9FADF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.288"
+                                        stop-color="#9FACF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.296"
+                                        stop-color="#9FACF9"
+                                      ></stop>
+                                      <stop
+                                        offset="0.304"
+                                        stop-color="#A0ABF8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.312"
+                                        stop-color="#A0ABF8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.32"
+                                        stop-color="#A0AAF8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.32"
+                                        stop-color="#A0AAF8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.328"
+                                        stop-color="#A0A9F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.336"
+                                        stop-color="#A1A9F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.344"
+                                        stop-color="#A1A8F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.352"
+                                        stop-color="#A2A8F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.36"
+                                        stop-color="#A2A7F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.36"
+                                        stop-color="#A2A7F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.368"
+                                        stop-color="#A2A6F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.376"
+                                        stop-color="#A3A6F8"
+                                      ></stop>
+                                      <stop
+                                        offset="0.384"
+                                        stop-color="#A3A5F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.392"
+                                        stop-color="#A4A5F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.4"
+                                        stop-color="#A4A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.408"
+                                        stop-color="#A5A4F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.416"
+                                        stop-color="#A7A5F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.424"
+                                        stop-color="#A8A5F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.432"
+                                        stop-color="#AAA6F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.44"
+                                        stop-color="#ABA6F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.44"
+                                        stop-color="#ABA6F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.448"
+                                        stop-color="#ACA6F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.456"
+                                        stop-color="#ADA7F7"
+                                      ></stop>
+                                      <stop
+                                        offset="0.464"
+                                        stop-color="#AFA7F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.472"
+                                        stop-color="#B0A8F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.48"
+                                        stop-color="#B1A8F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.48"
+                                        stop-color="#B1A8F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.488"
+                                        stop-color="#B2A8F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.496"
+                                        stop-color="#B3A8F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.504"
+                                        stop-color="#B5A9F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.512"
+                                        stop-color="#B6A9F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.52"
+                                        stop-color="#B7A9F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.52"
+                                        stop-color="#B7A9F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.528"
+                                        stop-color="#B8A9F6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.536"
+                                        stop-color="#B9AAF6"
+                                      ></stop>
+                                      <stop
+                                        offset="0.544"
+                                        stop-color="#BBAAF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.552"
+                                        stop-color="#BCABF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.56"
+                                        stop-color="#BDABF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.56"
+                                        stop-color="#BDABF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.568"
+                                        stop-color="#BEABF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.576"
+                                        stop-color="#BFACF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.584"
+                                        stop-color="#C0ACF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.592"
+                                        stop-color="#C1ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.6"
+                                        stop-color="#C2ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.608"
+                                        stop-color="#C3ADF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.616"
+                                        stop-color="#C4AEF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.624"
+                                        stop-color="#C5AEF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.632"
+                                        stop-color="#C6AFF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.64"
+                                        stop-color="#C7AFF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.64"
+                                        stop-color="#C7AFF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.648"
+                                        stop-color="#C8AFF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.656"
+                                        stop-color="#C9AFF5"
+                                      ></stop>
+                                      <stop
+                                        offset="0.664"
+                                        stop-color="#CAB0F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.672"
+                                        stop-color="#CBB0F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.68"
+                                        stop-color="#CCB0F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.68"
+                                        stop-color="#CCB0F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.688"
+                                        stop-color="#CDB0F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.696"
+                                        stop-color="#CEB1F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.704"
+                                        stop-color="#CEB1F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.712"
+                                        stop-color="#CFB2F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.72"
+                                        stop-color="#D0B2F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.72"
+                                        stop-color="#D0B2F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.728"
+                                        stop-color="#D1B2F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.736"
+                                        stop-color="#D2B2F4"
+                                      ></stop>
+                                      <stop
+                                        offset="0.744"
+                                        stop-color="#D3B3F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.752"
+                                        stop-color="#D4B3F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.76"
+                                        stop-color="#D5B3F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.76"
+                                        stop-color="#D5B3F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.768"
+                                        stop-color="#D6B3F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.776"
+                                        stop-color="#D7B4F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.784"
+                                        stop-color="#D7B4F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.792"
+                                        stop-color="#D8B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.8"
+                                        stop-color="#D9B5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.808"
+                                        stop-color="#DAB5F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.816"
+                                        stop-color="#DBB6F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.824"
+                                        stop-color="#DBB6F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.832"
+                                        stop-color="#DCB7F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.84"
+                                        stop-color="#DDB7F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.84"
+                                        stop-color="#DDB7F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.848"
+                                        stop-color="#DEB7F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.856"
+                                        stop-color="#DFB7F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.864"
+                                        stop-color="#DFB8F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.872"
+                                        stop-color="#E0B8F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.88"
+                                        stop-color="#E1B8F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.88"
+                                        stop-color="#E1B8F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.888"
+                                        stop-color="#E2B8F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.896"
+                                        stop-color="#E2B9F3"
+                                      ></stop>
+                                      <stop
+                                        offset="0.904"
+                                        stop-color="#E3B9F2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.912"
+                                        stop-color="#E3BAF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.92"
+                                        stop-color="#E4BAF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.92"
+                                        stop-color="#E4BAF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.928"
+                                        stop-color="#E5BAF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.936"
+                                        stop-color="#E6BAF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.944"
+                                        stop-color="#E6BBF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.952"
+                                        stop-color="#E7BBF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.96"
+                                        stop-color="#E8BBF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.96"
+                                        stop-color="#E8BBF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.968"
+                                        stop-color="#E9BBF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.976"
+                                        stop-color="#E9BCF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.984"
+                                        stop-color="#EABCF2"
+                                      ></stop>
+                                      <stop
+                                        offset="0.992"
+                                        stop-color="#EABDF2"
+                                      ></stop>
+                                      <stop
+                                        offset="1"
+                                        stop-color="#EBBDF2"
+                                      ></stop>
+                                    </linearGradient>
+                                    <clipPath id="clip0_2115_1165">
+                                      <rect
+                                        width="13.0909"
+                                        height="13.0909"
+                                        fill="white"
+                                        transform="translate(0 0.909088)"
+                                      ></rect>
+                                    </clipPath>
+                                  </defs></svg
+                                ><svg
+                                  class="UpscaleType-module--Star--Z6iFR UpscaleType-module--Star4--hj30I"
+                                  width="10"
+                                  height="10"
+                                  viewBox="0 0 10 10"
+                                  fill="none"
+                                >
+                                  <g
+                                    opacity="0.3"
+                                    clip-path="url(#clip0_2115_1144)"
+                                  >
+                                    <path
+                                      d="M4.99991 0C5.16657 2.63911 7.26988 4.74244 9.909 4.90909C7.26988 5.07575 5.16657 7.17905 4.99991 9.81818C4.83326 7.17905 2.72993 5.07575 0.0908203 4.90909C2.72993 4.74244 4.83326 2.63911 4.99991 0Z"
+                                      fill="#E6E6FF"
+                                    ></path>
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2115_1144">
+                                      <rect
+                                        width="9.81818"
+                                        height="9.81818"
+                                        fill="white"
+                                        transform="translate(0.0908203)"
+                                      ></rect>
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                              </div>
+                              <span>Magic (beta)</span
+                              ><span
+                                class="Popover-module--PopoverTrigger--DwLpw"
+                                ><svg
+                                  class="Popover-module--DefaultTrigger--utTX1"
+                                  viewBox="0 0 10 10"
+                                >
+                                  <g
+                                    fill="none"
+                                    fill-rule="evenodd"
+                                    transform="translate(-1 -1)"
+                                  >
+                                    <polygon
+                                      points="0 0 12 0 12 12 0 12"
+                                    ></polygon>
+                                    <path
+                                      fill="currentColor"
+                                      fill-rule="nonzero"
+                                      d="M6,1 C3.24,1 1,3.24 1,6 C1,8.76 3.24,11 6,11 C8.76,11 11,8.76 11,6 C11,3.24 8.76,1 6,1 Z M6,8.5 C5.725,8.5 5.5,8.275 5.5,8 L5.5,6 C5.5,5.725 5.725,5.5 6,5.5 C6.275,5.5 6.5,5.725 6.5,6 L6.5,8 C6.5,8.275 6.275,8.5 6,8.5 Z M6.5,4.5 L5.5,4.5 L5.5,3.5 L6.5,3.5 L6.5,4.5 Z"
+                                    ></path>
+                                  </g></svg></span
+                            ></label>
+                          </div>
+                        </div>
+                        <div
+                          class="SettingsBarOption-module--SubItemDivider--plHMB"
+                        ></div>
+                        <div
+                          class="SettingsBarOption-module--SubOptionWrapper--wAwLK"
+                        >
+                          <div
+                            class="SettingsBarOption-module--SubOptionContent--HQH2k"
+                          >
+                            <div
+                              class="UpscaleType-module--SettingsBarSubOptionUpscaling--mrMOd"
+                            >
+                              <div
+                                class="UpscaleType-module--UpscalingControls--Z8Ubm"
+                              >
+                                <div
+                                  class="UpscaleType-module--UpscalingControlsHeader--wmhCo"
+                                >
+                                  Size
+                                </div>
+                                <div class="RadioGroup-module--Group--VN2hp">
+                                  <label
+                                    class="RadioGroup-module--Label--+sny3 RadioGroup-module--Active--WgLOy RadioGroup-module--extraSmall--d5dxF UpscaleType-module--UpscalingControlsButtons--CIcR5"
+                                    ><div>
+                                      <input
+                                        type="radio"
+                                        class="RadioGroup-module--Input--XDP7y"
+                                        name="upscalingSizeOptions"
+                                        value="auto"
+                                        checked=""
+                                      />
+                                    </div>
+                                    Auto</label
+                                  ><label
+                                    class="RadioGroup-module--Label--+sny3 RadioGroup-module--Regular--AtWz9 RadioGroup-module--extraSmall--d5dxF UpscaleType-module--UpscalingControlsButtons--CIcR5"
+                                    ><div>
+                                      <input
+                                        type="radio"
+                                        class="RadioGroup-module--Input--XDP7y"
+                                        name="upscalingSizeOptions"
+                                        value="custom"
+                                      />
+                                    </div>
+                                    Custom</label
+                                  ><label
+                                    class="RadioGroup-module--Label--+sny3 RadioGroup-module--Regular--AtWz9 RadioGroup-module--extraSmall--d5dxF RadioGroup-module--Disabled--nKOXs UpscaleType-module--UpscalingControlsButtons--CIcR5"
+                                    ><div>
+                                      <input
+                                        type="radio"
+                                        class="RadioGroup-module--Input--XDP7y"
+                                        name="upscalingSizeOptions"
+                                        disabled=""
+                                        value="widthHeight"
+                                      />
+                                    </div>
+                                    <span
+                                      class="Popover-module--PopoverTriggerUpscale--jcUGq"
+                                      >Width &amp; Height</span
+                                    ></label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        id="lightAI"
+                        class="SettingsBarOption-module--OptionWrapper--MIGAh SettingsBarOption-module--EnhancementBar--LiejL"
+                      >
+                        <div class="SettingsBarOption-module--Header--DVXlU">
+                          <div
+                            class="SettingsBarOption-module--OptionBarHeader--pRBTw"
+                          >
+                            <div
+                              class="SettingsBarOption-module--OptionBarTitleWithBadge--EFfQS"
+                            >
+                              <span
+                                >Light AI<span
+                                  class="Popover-module--PopoverTrigger--DwLpw"
+                                  ><svg
+                                    class="Popover-module--DefaultTrigger--utTX1"
+                                    viewBox="0 0 10 10"
+                                  >
+                                    <g
+                                      fill="none"
+                                      fill-rule="evenodd"
+                                      transform="translate(-1 -1)"
+                                    >
+                                      <polygon
+                                        points="0 0 12 0 12 12 0 12"
+                                      ></polygon>
+                                      <path
+                                        fill="currentColor"
+                                        fill-rule="nonzero"
+                                        d="M6,1 C3.24,1 1,3.24 1,6 C1,8.76 3.24,11 6,11 C8.76,11 11,8.76 11,6 C11,3.24 8.76,1 6,1 Z M6,8.5 C5.725,8.5 5.5,8.275 5.5,8 L5.5,6 C5.5,5.725 5.725,5.5 6,5.5 C6.275,5.5 6.5,5.725 6.5,6 L6.5,8 C6.5,8.275 6.275,8.5 6,8.5 Z M6.5,4.5 L5.5,4.5 L5.5,3.5 L6.5,3.5 L6.5,4.5 Z"
+                                      ></path>
+                                    </g></svg></span
+                              ></span>
+                            </div>
+                            <div
+                              style="
+                                position: relative;
+                                display: inline-block;
+                                text-align: left;
+                                opacity: 1;
+                                direction: ltr;
+                                border-radius: 10px;
+                                transition: opacity 0.25s;
+                                touch-action: none;
+                                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                                user-select: none;
+                              "
+                            >
+                              <div
+                                class="react-switch-bg"
+                                style="
+                                  height: 20px;
+                                  width: 32px;
+                                  margin: 0px;
+                                  position: relative;
+                                  background: rgb(136, 136, 136);
+                                  border-radius: 10px;
+                                  cursor: pointer;
+                                  transition: background 0.25s;
+                                "
+                              ></div>
+                              <div
+                                class="react-switch-handle"
+                                style="
+                                  height: 20px;
+                                  width: 20px;
+                                  background: rgb(255, 255, 255);
+                                  display: inline-block;
+                                  cursor: pointer;
+                                  border-radius: 50%;
+                                  position: absolute;
+                                  transform: translateX(0px);
+                                  top: 0px;
+                                  outline: 0px;
+                                  border: 0px;
+                                  transition: background-color 0.25s,
+                                    transform 0.25s, box-shadow 0.15s;
+                                "
+                              ></div>
+                              <input
+                                type="checkbox"
+                                role="switch"
+                                aria-checked="false"
+                                style="
+                                  border: 0px;
+                                  clip: rect(0px, 0px, 0px, 0px);
+                                  height: 1px;
+                                  margin: -1px;
+                                  overflow: hidden;
+                                  padding: 0px;
+                                  position: absolute;
+                                  width: 1px;
+                                "
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class=""></div>
+                      </div>
+                      <div
+                        id="removeBackground"
+                        class="SettingsBarOption-module--OptionWrapper--MIGAh SettingsBarOption-module--EnhancementBar--LiejL"
+                      >
+                        <div class="SettingsBarOption-module--Header--DVXlU">
+                          <div
+                            class="SettingsBarOption-module--OptionBarHeader--pRBTw"
+                          >
+                            <div>Remove background</div>
+                            <div
+                              style="
+                                position: relative;
+                                display: inline-block;
+                                text-align: left;
+                                opacity: 1;
+                                direction: ltr;
+                                border-radius: 10px;
+                                transition: opacity 0.25s;
+                                touch-action: none;
+                                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                                user-select: none;
+                              "
+                            >
+                              <div
+                                class="react-switch-bg"
+                                style="
+                                  height: 20px;
+                                  width: 32px;
+                                  margin: 0px;
+                                  position: relative;
+                                  background: rgb(136, 136, 136);
+                                  border-radius: 10px;
+                                  cursor: pointer;
+                                  transition: background 0.25s;
+                                "
+                              ></div>
+                              <div
+                                class="react-switch-handle"
+                                style="
+                                  height: 20px;
+                                  width: 20px;
+                                  background: rgb(255, 255, 255);
+                                  display: inline-block;
+                                  cursor: pointer;
+                                  border-radius: 50%;
+                                  position: absolute;
+                                  transform: translateX(0px);
+                                  top: 0px;
+                                  outline: 0px;
+                                  border: 0px;
+                                  transition: background-color 0.25s,
+                                    transform 0.25s, box-shadow 0.15s;
+                                "
+                              ></div>
+                              <input
+                                type="checkbox"
+                                role="switch"
+                                aria-checked="false"
+                                style="
+                                  border: 0px;
+                                  clip: rect(0px, 0px, 0px, 0px);
+                                  height: 1px;
+                                  margin: -1px;
+                                  overflow: hidden;
+                                  padding: 0px;
+                                  position: absolute;
+                                  width: 1px;
+                                "
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class=""></div>
+                      </div>
+                    </div>
+                    <div class="Controls-module--AdvancedOptions--vbc0x">
+                      <div
+                        class="AdvancedOptions-module--AdvancedOptionsControl--v4Xn7"
+                      >
+                        <button
+                          class="Button-module--Button--iWqHF Button-module--ghost--tqlHF AdvancedOptions-module--AdvancedOptionsButton--soR6w"
+                        >
+                          <div class="Button-module--ButtonContent--YYh9w">
+                            Show advanced options<svg
+                              class="AdvancedOptions-module--AdvancedOptionsButtonIcon--wAe5V"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path d="M0 0h24v24H0V0z" fill="none"></path>
+                              <path
+                                d="M11.29 8.71L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.38-.39-1.02-.39-1.41 0z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </button>
+                      </div>
+                      <button
+                        class="Button-module--Button--iWqHF Button-module--primary--Xt+ZK Button-module--large--NGxL6 Button-module--primary_dark--ojDKT Controls-module--SubmitButton--hV5zv Button-module--Block--jR88O Button-module--Disabled--3WKJf"
+                        disabled=""
+                      >
+                        <div class="Button-module--ButtonContent--YYh9w">
+                          <div
+                            class="Controls-module--SubmitButtonTitle---ESEZ"
+                          >
+                            Start processing
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </section> -->
+                <div
+                  class="Playground-module--ModalControlsWrapper--OxQXo"
+                ></div>
+              </div>
+            </div>
+          </main>
+          <div class="Toastify"></div>
+        </div>
+      </div>
+      <!-- <div
+        id="gatsby-announcer"
+        style="
+          position: absolute;
+          top: 0;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        "
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        Navigated to My images | LetsEnhance.io - Image enhancement powered by
+        AI
+      </div> -->
+    </div>
+  </body>
+</html>

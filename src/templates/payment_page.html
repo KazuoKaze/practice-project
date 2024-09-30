@@ -1,0 +1,17 @@
+<form action="/verify_payment/" method="POST">
+    <script
+        src="https://checkout.razorpay.com/v1/checkout.js"
+        data-key="{{ razorpay_key }}"
+        data-amount="{{ amount }}"
+        data-currency="INR"
+        data-order_id="{{ order_id }}"
+        data-buttontext="Pay Now"
+        data-name="Your Website"
+        data-description="Buy {{ plan.name }}"
+        data-image="/your_logo.png"
+        data-prefill.name="{{ user.username }}"
+        data-prefill.email="{{ user.email }}"
+        data-theme.color="#F37254">
+    </script>
+    <input type="hidden" name="order_id" value="{{ order_id }}">
+</form>

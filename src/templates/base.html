@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock title %}</title>
+    {% include 'base/new_css.html' %}
+    {% include 'base/css.html' %}
+  </head>
+  <body>
+    <div id="___gatsby">
+      <div style="outline: none" tabindex="-1" id="gatsby-focus-wrapper">
+        {% include 'nav/navbar.html' %}
+      </div>
+      {% block content %} 
+
+      {% endblock content %}
+      {% include 'footer.html' %}
+    </div>
+    {% include 'base/js.html' %}
+  </body>
+</html>

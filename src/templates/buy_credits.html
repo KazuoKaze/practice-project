@@ -1,0 +1,151 @@
+{% extends 'base.html' %} 
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+
+<main class="MainApplication-module--Main--tiIu0">
+    <div style="margin-bottom: 10vw;">
+      <div class="PageTemplate-module--Page--V5YxX">
+        <div class="PageTemplate-module--PageContent--pf6bO">
+        <section
+            class="PageTemplate-module--Section--5e3RS PageTemplate-module--Hero--sZuHY"
+          >
+            <div
+              class="PageTemplate-module--SectionContent--mPW1C PageTemplate-module--HeroContent--q7pM3"
+            >
+              <div class="PageTemplate-module--HeroHeader--0o1BR">
+                <!-- <a
+                  class="PageTemplate-module--HeroHeaderAnnouncementLink--FCxfY"
+                  target="_blank"
+                  rel="noreferrer"
+                  ><div
+                    class="PageTemplate-module--HeroAnnouncementLabel--F72Mh"
+                  >
+                    <div
+                      class="PageTemplate-module--HeroHeaderAnnouncementLabelNew--5xAOf"
+                    >
+                      New
+                    </div>
+                    <span
+                      >Breakthrough: Our AI now delivers unmatched image
+                      quality</span
+                    ><svg
+                      class="PageTemplate-module--HeroHeaderAnnouncementIcon--TYD5G"
+                      viewBox="0 0 24 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(-12 -18)"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M16.24,18.58 L24,26.34 L31.76,18.58 C32.54,17.8 33.8,17.8 34.58,18.58 C35.36,19.36 35.36,20.62 34.58,21.4 L25.4,30.58 C24.62,31.36 23.36,31.36 22.58,30.58 L13.4,21.4 C12.62,20.62 12.62,19.36 13.4,18.58 C14.18,17.82 15.46,17.8 16.24,18.58 Z"
+                        ></path>
+                      </g>
+                    </svg></div
+                ></a> -->
+                <div
+                  class="PageTemplate-module--SectionTitle--OuHZu PageTemplate-module--SectionTitle_dark---AA86 PageTemplate-module--HeroTitle--dgtu+"
+                >
+                  <h1 class="PageTemplate-module--HeroTitleStable--iqTLN">
+                    Wanna buy more credits?
+                  </h1>
+                  <span class="PageTemplate-module--TypingTextWrapper--nCiWQ"><span>buy it from here</span></span
+                  >
+                </div>
+                <div
+                  class="PageTemplate-module--SectionSubtitle--pg3hT PageTemplate-module--HeroSubtitle--8+YPW"
+                  style="margin-left: 1rem;"
+                >
+                  <ul>
+                    <li>
+                      Make every picture sharp and clear with one click
+                    </li>
+                    <li>Increase image resolution and improve quality</li>
+                    <li>Generate stunning AI art in 4K &amp; beyond</li>
+                  </ul>
+                </div>
+                <div class="PageTemplate-module--SectionSubtitle--pg3hT PageTemplate-module--HeroSubtitle--8+YPW">
+                    <form class="max-w mx-auto" method="POST" action="{% url 'buy_credits' %}">   
+                        {% csrf_token %}
+                        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"></label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-6 h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 20 20" style="fill: #fff;">
+                                    <path fill="currentColor" d="m18.774 8.245-.892-.893a1.5 1.5 0 0 1-.437-1.052V5.036a2.484 2.484 0 0 0-2.48-2.48H13.7a1.5 1.5 0 0 1-1.052-.438l-.893-.892a2.484 2.484 0 0 0-3.51 0l-.893.892a1.5 1.5 0 0 1-1.052.437H5.036a2.484 2.484 0 0 0-2.48 2.481V6.3a1.5 1.5 0 0 1-.438 1.052l-.892.893a2.484 2.484 0 0 0 0 3.51l.892.893a1.5 1.5 0 0 1 .437 1.052v1.264a2.484 2.484 0 0 0 2.481 2.481H6.3a1.5 1.5 0 0 1 1.052.437l.893.892a2.484 2.484 0 0 0 3.51 0l.893-.892a1.5 1.5 0 0 1 1.052-.437h1.264a2.484 2.484 0 0 0 2.481-2.48V13.7a1.5 1.5 0 0 1 .437-1.052l.892-.893a2.484 2.484 0 0 0 0-3.51Z"/>
+                                    <path fill="#fff" d="M8 13a1 1 0 0 1-.707-.293l-2-2a1 1 0 1 1 1.414-1.414l1.42 1.42 5.318-3.545a1 1 0 0 1 1.11 1.664l-6 4A1 1 0 0 1 8 13Z"/>
+                                </svg>
+                            </div>
+                            <input style="border: none;" type="number" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Number of pics?" name="num_pics" required />
+                            <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buy Credits</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="PageTemplate-module--HeroActions--tZjAE">
+
+
+                  <!-- <a
+                    class="PageTemplate-module--HeroActionsLink--WE7Q+ PageTemplate-module--HeroActionsLinkPrimary--NGk8u"
+                    href="/signup"
+                    ><button
+                      class="Button-module--Button--iWqHF Button-module--primary--Xt+ZK Button-module--medium--vbp8B Button-module--primary_dark--ojDKT PageTemplate-module--HeroActionsButton--Jdn3v PageTemplate-module--HeroActionsButtonPrimary--C6Uzj Button-module--Block--jR88O"
+                    >
+                      <div class="Button-module--ButtonContent--YYh9w">
+                        Start free
+                      </div>
+                    </button></a
+                  > -->
+                  <!-- <a
+                    
+                    target="_blank"
+                    class="ButtonLink-module--Button--kiM6R ButtonLink-module--medium--NX16J ButtonLink-module--secondary_dark--Cb6KO PageTemplate-module--HeroActionsLink--WE7Q+ PageTemplate-module--HeroActionsButton--Jdn3v"
+                    ><div class="ButtonLink-module--ButtonContent--xDs6z">
+                      Request API
+                    </div></a
+                  > -->
+                </div>
+              </div>
+              <!-- <div
+                class="PageTemplate-module--HeroUploaderWrapper--Pws7H"
+              >
+                <div class="PageTemplate-module--HeroUploader--Rl08y">
+                  <div
+                    class="PageTemplate-module--HeroUploaderContent--qz--n"
+                  >
+                    <svg
+                      class="PageTemplate-module--HeroUploaderIcon---1N5j"
+                      width="40"
+                      height="25"
+                      viewBox="0 0 40 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M31.5785 10.3741C31.0091 10.3741 30.4836 10.4167 29.9142 10.5442C29.9142 10.5017 29.9142 10.5017 29.9142 10.4592C29.9142 4.71939 25.1402 0 19.2712 0C14.1906 0 9.8546 3.48639 8.84724 8.33333C8.71584 8.33333 8.58445 8.33333 8.49685 8.33333C3.81044 8.33333 0 12.0748 0 16.6667C0 21.216 3.72285 24.915 8.32166 25H16.2929V24.0221V19.2602H13.3147C13.0081 19.2602 12.7453 19.0901 12.6139 18.835C12.4825 18.5799 12.4825 18.2823 12.6577 18.0697L18.877 9.31122C19.0084 9.09864 19.2712 8.97109 19.4902 8.97109C19.753 8.97109 19.972 9.09864 20.1034 9.31122L26.3227 18.0697C26.4103 18.1973 26.4541 18.3673 26.4541 18.4949C26.4541 18.6224 26.4103 18.75 26.3665 18.835C26.2351 19.0901 25.9723 19.2602 25.6658 19.2602H22.7751V24.0221V25H31.6661C35.5641 24.9575 38.7614 21.8963 39.0242 18.1548V17.2619C38.7614 13.3929 35.5203 10.3741 31.5785 10.3741Z"
+                        fill="#2B2C39"
+                      ></path></svg
+                    ><span
+                      class="PageTemplate-module--HeroUploaderText--119oW"
+                      >Drag and drop anywhere
+                      <span
+                        class="PageTemplate-module--HeroUploaderTextColored--s9nsP"
+                        >to upload</span
+                      ></span
+                    ><input
+                      type="file"
+                      class="PageTemplate-module--FileInput--ALlMx"
+                      accept=".bmp, image/png, image/jpeg, image/jpg, image/bmp, image/webp"
+                    />
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+</main>
+
+{% endblock content %}
